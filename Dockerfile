@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
+LABEL maintainer="DCsunset"
 
-COPY ./httptunnel/larsbrinkhoff-httptunnel-f440dcb.tar.gz /data/src
+COPY ./httptunnel/larsbrinkhoff-httptunnel-f440dcb.tar.gz /data/src/
 
 RUN set -x && \
 	\
@@ -11,15 +12,12 @@ RUN set -x && \
 	\
 # Compile
 	cd /data/src && \ 
-	tar -xf /data/src/*.tar.gz --strip 1
+	tar -xf /data/src/*.tar.gz --strip 1 && \
 	./autogen.sh && \
 	./configure && \
 	make && \
 	make install && \
 	\
 # Remove cache
-	apt-get clean autoclean && \
-	apt-get autoremove --yes && \
 	rm -rf /var/lib/apt/lists/*
-
 
