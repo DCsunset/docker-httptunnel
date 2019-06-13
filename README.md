@@ -1,5 +1,9 @@
 # docker-httptunnel
 
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/httptunnel.svg)](https://hub.docker.com/r/dcsunset/httptunnel)
+[![Docker Pulls](https://img.shields.io/docker/pulls/dcsunset/httptunnel.svg)](https://hub.docker.com/r/dcsunset/httptunnel)
+[![Docker Stars](https://img.shields.io/docker/stars/dcsunset/httptunnel.svg)](https://hub.docker.com/r/dcsunset/httptunnel)
+
 This repository is the dockerized version for [httptunnel](https://github.com/larsbrinkhoff/httptunnel).
 
 ## Install
