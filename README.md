@@ -32,7 +32,7 @@ docker run -d --name httptunnel -p 8888:8888 httptunnel:latest hts -w -F localho
 
 THe above expamle will set up httptunnel server to listen on port 8888 and forward to localhost:23.
 
-*Note*: The option `-w` is necessary or the docker container will exit instead of running in background.
+**Note**: The option `-w` is necessary or the docker container will exit instead of running in background.
 
 
 ### Client Side
