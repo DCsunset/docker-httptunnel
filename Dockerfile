@@ -3,7 +3,7 @@ LABEL maintainer="DCsunset"
 
 COPY ./httptunnel/larsbrinkhoff-httptunnel-f440dcb.tar.gz /data/src/
 
-RUN set -x && \
+RUN set -ex && \
 	\
 # Install dependencies
 	apt-get update && \
@@ -18,6 +18,7 @@ RUN set -x && \
 	make && \
 	make install && \
 	\
-# Remove cache
+# Clean
+	rm -rf /data && \
 	rm -rf /var/lib/apt/lists/*
 
